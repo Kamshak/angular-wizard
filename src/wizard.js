@@ -48,6 +48,10 @@ angular.module('mgo-angular-wizard').directive('wizard', function() {
                     $scope.goTo($scope.steps[0]);
                 }
             };
+            
+            this.getSteps = function() {
+                return $scope.steps;
+            };
 
             $scope.goTo = function(step) {
                 unselectAll();
