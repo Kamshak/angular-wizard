@@ -1,6 +1,6 @@
 /**
  * Easy to use Wizard library for AngularJS
- * @version v0.4.0 - 2014-08-18 * @link https://github.com/mgonto/angular-wizard
+ * @version v0.4.0 - 2014-12-27 * @link https://github.com/mgonto/angular-wizard
  * @author Martin Gontovnikas <martin@gon.to>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -96,6 +96,10 @@ angular.module('mgo-angular-wizard').directive('wizard', function() {
                 if ($scope.steps.length === 1) {
                     $scope.goTo($scope.steps[0]);
                 }
+            };
+            
+            this.getSteps = function() {
+                return $scope.steps;
             };
 
             $scope.goTo = function(step) {
